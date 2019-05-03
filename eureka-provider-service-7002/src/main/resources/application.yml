@@ -1,0 +1,36 @@
+server:
+  port: 7002
+
+spring:
+  application:
+    #这在以后的服务与服务之间相互调用一般都是根据这个name
+    name: dictservice-provider-user  # 对外曝光微服务名称
+
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://peer1:9528/eureka/  # 注册中心已经开启认证 单机版本
+      defaultZone: http://enodeone.com:8001/eureka/, http://enodetwo.com:8002/eureka/, http://enodethree.com:8003/eureka/ # 集群版本
+#      defaultZone: http://e8001/eureka/, http://e8002/eureka/, http://e8003/eureka/ # docker集群版本
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      #自定义元数据，key:value  都是自定义的
+      mydata: rbdata我是元数据
+    instanceId: ${spring.application.name}:${server.port} # 微服务虚拟地址
+
+# 健康检查开启，默认开启
+management:
+  endpoint:
+    health:
+      enabled: true
+
+info:
+  app.name: dictservice-provider-user-7002
+  app.describe: cluster-test-node2
+  company.name: pnodetwo.com
+  build.version: 1.0.0
+
+# 自定义配置
+user:
+  userServiceUrl: DICTSERVICE-PROVIDER-USER

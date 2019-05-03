@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/com-zuul-gateway-9527/com-zuul-gateway-9527.iml" filepath="$PROJECT_DIR$/com-zuul-gateway-9527/com-zuul-gateway-9527.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-consume-service/eureka-consume-service.iml" filepath="$PROJECT_DIR$/eureka-consume-service/eureka-consume-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-provider-service-7001/eureka-provider-service-7001.iml" filepath="$PROJECT_DIR$/eureka-provider-service-7001/eureka-provider-service-7001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-provider-service-7002/eureka-provider-service-7002.iml" filepath="$PROJECT_DIR$/eureka-provider-service-7002/eureka-provider-service-7002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-provider-service-7003/eureka-provider-service-7003.iml" filepath="$PROJECT_DIR$/eureka-provider-service-7003/eureka-provider-service-7003.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-register-center-8001/eureka-register-center-8001.iml" filepath="$PROJECT_DIR$/eureka-register-center-8001/eureka-register-center-8001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-register-center-8002/eureka-register-center-8002.iml" filepath="$PROJECT_DIR$/eureka-register-center-8002/eureka-register-center-8002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-register-center-8003/eureka-register-center-8003.iml" filepath="$PROJECT_DIR$/eureka-register-center-8003/eureka-register-center-8003.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feign-consume-service-8080/feign-consume-service-8080.iml" filepath="$PROJECT_DIR$/feign-consume-service-8080/feign-consume-service-8080.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hystrix-consume-dashboard9001/hystrix-consume-dashboard9001.iml" filepath="$PROJECT_DIR$/hystrix-consume-dashboard9001/hystrix-consume-dashboard9001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hystrix-consume-service8081/hystrix-consume-service8081.iml" filepath="$PROJECT_DIR$/hystrix-consume-service8081/hystrix-consume-service8081.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservicecloud-config-3344/microservicecloud-config-3344.iml" filepath="$PROJECT_DIR$/microservicecloud-config-3344/microservicecloud-config-3344.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-docker/spring-cloud-docker.iml" filepath="$PROJECT_DIR$/spring-cloud-docker/spring-cloud-docker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springcloud.iml" filepath="$PROJECT_DIR$/.idea/springcloud.iml" />
+    </modules>
+  </component>
+</project>

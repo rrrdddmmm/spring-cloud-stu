@@ -1,0 +1,16 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    #\u8FD9\u5728\u4EE5\u540E\u7684\u670D\u52A1\u4E0E\u670D\u52A1\u4E4B\u95F4\u76F8\u4E92\u8C03\u7528\u4E00\u822C\u90FD\u662F\u6839\u636E\u8FD9\u4E2Aname
+    name: springcloud-config  # \u5BF9\u5916\u66DD\u5149\u5FAE\u670D\u52A1\u540D\u79F0
+  cloud:
+    config:
+      label: master # git master \u5206\u652F
+      server:
+        git:
+          uri: https://github.com/rrrdddmmm/springcloud-config.git
+          username: rrrdddmmm
+          password: re?314187985
+#          search-paths: config/resp # \u914D\u7F6E\u6587\u4EF6\u6240\u5728\u8DEF\u5F84

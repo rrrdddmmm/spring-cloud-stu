@@ -1,0 +1,27 @@
+server:
+  port: 80
+
+eureka:
+  instance:
+      hostname: 127.0.0.1
+      # 发呆时间，即服务失效时间（缺省为90s）,就是超过15秒没有续约就会从注册表中剔除
+      lease-expiration-duration-in-seconds: 90
+      # 心跳时间，即服务续约间隔时间（缺省为30s）
+      lease-renewal-interval-in-seconds: 30
+
+  client:
+    register-with-eureka: false #作为消费者不提供服务，不应该注册自己
+    #设置eureka服务器所在的地址，查询服务和注册服务都需要依赖这个地址。高可用的注册中心时，
+    #可以配置多个注册中心，通过逗号隔开
+    serviceUrl:
+#      defaultZone: http://peer1:9528/eureka/
+      defaultZone: http://enodeone.com:8001/eureka/, http://enodetwo.com:8002/eureka/, http://enodethree.com:8003/eureka/ # 集群版本
+
+# 健康检查开启，默认开启
+management:
+  endpoint:
+    health:
+      enabled: true
+
+user:
+  userServiceUrl: DICTSERVICE-PROVIDER-USER

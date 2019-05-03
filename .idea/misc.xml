@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/eureka-register-center-8001/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-register-center-8002/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-register-center-8003/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-provider-service-7001/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-provider-service-7002/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-provider-service-7003/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-consume-service/pom.xml" />
+        <option value="$PROJECT_DIR$/feign-consume-service-8080/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-docker/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix-consume-service8081/pom.xml" />
+        <option value="$PROJECT_DIR$/hystrix-consume-dashboard9001/pom.xml" />
+        <option value="$PROJECT_DIR$/com-zuul-gateway-9527/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicecloud-config-3344/pom.xml" />
+      </list>
+    </option>
+  </component>
+</project>

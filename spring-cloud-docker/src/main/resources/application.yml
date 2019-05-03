@@ -1,0 +1,21 @@
+
+spring:
+  application:
+    name: eureka-register-center-8004
+
+server:
+  port: 8004
+
+eureka:
+  instance:
+    hostname: 127.0.0.1 # eureka\u7684\u670D\u52A1\u7AEF\u5B9E\u4F8B\u540D\u79F0
+    preferIpAddress: true #
+  client:
+    registerWithEureka: false # \u662F\u5426\u5C06\u81EA\u5DF1\u6CE8\u518C\u5230eureka\u4E2D
+    fetchRegistry: false # \u4E0D\u9700\u8981\u8FDB\u884C\u68C0\u7D22\u3010\u53D1\u73B0\u3011\u670D\u52A1
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ # \u8BBE\u7F6EEureka Server\u4EA4\u4E92\u5730\u5740 \u67E5\u8BE2\u670D\u52A1\u6CE8\u518C\u4E2D\u5FC3 \u5355\u673A\u7248\u672C
+#      defaultZone: http://enodetwo.com:8002/eureka/, http://enodethree.com:8003/eureka/ # \u96C6\u7FA4\u7248\u672C
+    healthcheck:
+      enabled: true
+    eurekaServiceUrlPollIntervalSeconds: 60

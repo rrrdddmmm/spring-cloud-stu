@@ -1,0 +1,55 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    #\u8FD9\u5728\u4EE5\u540E\u7684\u670D\u52A1\u4E0E\u670D\u52A1\u4E4B\u95F4\u76F8\u4E92\u8C03\u7528\u4E00\u822C\u90FD\u662F\u6839\u636E\u8FD9\u4E2Aname
+    name: dictservice-zuul-${server.port}  # \u5BF9\u5916\u66DD\u5149\u5FAE\u670D\u52A1\u540D\u79F0
+
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://peer1:9528/eureka/  # \u6CE8\u518C\u4E2D\u5FC3\u5DF2\u7ECF\u5F00\u542F\u8BA4\u8BC1 \u5355\u673A\u7248\u672C
+      defaultZone: http://enodeone.com:8001/eureka/, http://enodetwo.com:8002/eureka/, http://enodethree.com:8003/eureka/ # \u96C6\u7FA4\u7248\u672C
+#      defaultZone: http://e8001/eureka/, http://e8002/eureka/, http://e8003/eureka/ # docker\u96C6\u7FA4\u7248\u672C
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      #\u81EA\u5B9A\u4E49\u5143\u6570\u636E\uFF0Ckey:value  \u90FD\u662F\u81EA\u5B9A\u4E49\u7684
+      mydata: rbdata\u6211\u662F\u5143\u6570\u636E
+    instanceId: zuul-9527.com  # \u5FAE\u670D\u52A1\u865A\u62DF\u5730\u5740
+
+
+# \u4E4B\u524D\u662F\u901A\u8FC7\u5BF9\u5916\u66DD\u5149\u7684\u670D\u52A1\u540D\u79F0\u8BBF\u95EEhttp://zuul-9527.com:9527/dictservice-provider-user/user/1
+zuul:
+  prefix: /spring
+  ignored-services: dictservice-provider-user
+  # \u5FFD\u7565\u5355\u4E2A\u5FAE\u670D\u52A1\uFF0C\u5373\u5C4F\u853D\u66DD\u5149\u670D\u52A1\u540D\u79F0\uFF0C\u4F7F\u5F97\u4F7F\u7528http://zuul-9527.com:9527/dictservice-provider-user/user/1\u4E0D\u80FD\u8BBF\u95EE
+#  ignored-services: \u201C*\u201D
+  # \u5FFD\u7565\u591A\u4E2A\u5FAE\u670D\u52A1\uFF0C\u4F7F\u5F97\u4F7F\u7528http://zuul-9527.com:9527/dictservice-provider-user/user/1\u4E0D\u80FD\u8BBF\u95EE
+  routes:
+  # \u81EA\u5B9A\u4E49\u670D\u52A1\u7684\u865A\u62DF\u540D\u79F0\u4E3A\uFF1Amyservicename\uFF0C\u5373\u9690\u85CF\u66DD\u5149\u7684\u670D\u52A1\u540D\u79F0dictservice-provider-user\uFF0C\u4F7F\u7528\u865A\u62DF\u540D\u79F0myservicename\u66FF\u4EE3
+    myservicename.serviceId: dictservice-provider-user
+    myservicename.path: /myservicename/**
+# \u4E4B\u540E\u53EF\u4EE5\u901A\u8FC7\uFF1Ahttp://zuul-9527.com:9527/myservicename/user/1 \u8FDB\u884C\u8BBF\u95EE\u4E86
+
+
+
+# \u5065\u5EB7\u68C0\u67E5\u5F00\u542F\uFF0C\u9ED8\u8BA4\u5F00\u542F
+management:
+  endpoints:
+    health:
+      enabled: true
+  web:
+    exposure:
+      include: '*'
+
+info:
+  app.name: dictservice-provider-user-7001
+  app.describe: cluster-test-node1
+  company.name: pnodeone.com
+  build.version: 1.0.0
+
+# \u81EA\u5B9A\u4E49\u914D\u7F6E
+user:
+  userServiceUrl: DICTSERVICE-PROVIDER-USER

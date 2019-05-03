@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/com-zuul-gateway-9527" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-consume-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-consume-service/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-provider-service-7001" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-provider-service-7001/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-provider-service-7002" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-provider-service-7002/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-provider-service-7003" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-provider-service-7003/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-register-center-8001" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-register-center-8001/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-register-center-8002" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-register-center-8002/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-register-center-8003" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-register-center-8003/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/feign-consume-service-8080" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/feign-consume-service-8080/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix-consume-dashboard9001" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix-consume-service8081" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservicecloud-config-3344" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-docker" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

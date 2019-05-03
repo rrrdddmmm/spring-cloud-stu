@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: eureka-register-center-8002
+  security:
+    user:
+      name: root          # 用户名
+      password: 123456    # 密码
+  basic:
+      enabled: true
+
+server:
+  port: 8002
+eureka:
+  instance:
+    hostname: enodetwo.com # eureka的服务端实例名称
+    preferIpAddress: true #
+  client:
+    registerWithEureka: false # 是否将自己注册到eureka中
+    fetchRegistry: false # 不需要进行检索【发现】服务
+    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+# 设置Eureka Server交互地址 查询服务注册中心 单机版本
+      defaultZone: http://enodeone.com:8001/eureka/, http://enodethree.com:8003/eureka/ # 集群版本
+#      defaultZone: http://e8001/eureka/, http://e8003/eureka/ # 集群docker版本
+    healthcheck:
+      enabled: true
+    eurekaServiceUrlPollIntervalSeconds: 60
